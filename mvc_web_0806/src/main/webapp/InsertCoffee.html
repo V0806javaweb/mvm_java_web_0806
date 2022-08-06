@@ -5,13 +5,42 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="InsertCoffeeServlet" method="post">
-            咖啡名稱:<input type="text" name="coffee" value="Extra Espresso"/><br/>
-            售價:<input type="text" name="sale" value="200"/><br/>
-            總量:<input type="text" name="total" value="10"/><br/>
-            供應商:<input type="text" name="supplier" value="150"/><br/>
-            價格:<input type="text" name="price" value="300"/><br/>
+	<form action="InsertCoffeeServlet" method="post" onsubmit="return test();">
+            咖啡名稱:<input type="text" id="coffee" name="coffee" value="Extra Espresso"/><br/>
+            售價:<input type="text" id="sale" name="sale" value="200"/><br/>
+            總量:<input type="text" id="total" name="total" value="10"/><br/>
+            供應商:<input type="text" id="supplier" name="supplier" value="150"/><br/>
+            價格:<input type="text" id="price" name="price" value="300"/><br/>
             <input type="submit" value="Send"/>
+            <input type="button" value="creat auto json" onclick="create()"/>
+            <input type="button" value="form json" onclick="formJson()"/>
     </form>
+    <script type="text/javascript">
+     function test(){
+       return true;	 
+     }
+     function create(){
+     	var obj =new Object();
+     	obj.no=1;
+     	obj.userName="Mary";
+     	var str=JSON.stringify(obj);
+     	alert(str);
+     }
+     function formJson(){
+     	var coffee=document.getElementById("coffee").value;
+     	var sale=document.getElementById("sale").value;
+     	var total=document.getElementById("total").value;
+     	var supplier=document.getElementById("supplier").value;
+     	var price=document.getElementById("price").value;
+     	var obj={ };
+     	obj.coffee=coffee;
+     	obj.sale=sale;
+     	obj.total=total;
+     	obj.supplier=supplier;
+     	obj.price=price;
+     	var str=JSON.stringify(obj);
+     	alert(str);
+     }
+    </script>
 </body>
 </html>
