@@ -16,7 +16,7 @@ public class ProductDAO {
         Statement stmt = null;
         ResultSet rs = null;
         ArrayList list = new ArrayList();
-        String query = "SELECT productCode  as  code , quantityInStock  as  quantity, productDescription  as  description,  buyPrice  as  price  FROM  Products  where buyPrice>=90.0 "; 
+        String query = "SELECT productCode  as  code , quantityInStock  as  quantity, productDescription  as  description,  buyPrice  as  price  FROM  Products"; 
         try {    
         	//參考libraries maven dependencies
             Class.forName("com.mysql.cj.jdbc.Driver");
