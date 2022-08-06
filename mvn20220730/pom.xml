@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>demo</groupId>
-  <artifactId>mvmweb0806</artifactId>
+  <artifactId>mvn20220730</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>mvmweb0806 Maven Webapp</name>
+  <name>mvn20220730 Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -27,14 +27,19 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-    	<groupId>jstl</groupId>
+    	<groupId>mysql</groupId>
+    	<artifactId>mysql-connector-java</artifactId>
+    	<version>8.0.29</version>
+    </dependency>
+    <dependency>
+    	<groupId>javax.servlet</groupId>
     	<artifactId>jstl</artifactId>
     	<version>1.2</version>
     </dependency>
   </dependencies>
 
   <build>
-    <finalName>mvmweb0806</finalName>
+    <finalName>mvn20220730</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
