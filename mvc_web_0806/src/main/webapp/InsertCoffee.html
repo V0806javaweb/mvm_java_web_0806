@@ -9,7 +9,7 @@
            咖啡名稱:<input type="text" id="coffee" value="Extra Espresso"/><br/>
             售價:<input type="text" id="sale" value="200"/><br/>
             總量:<input type="text" id="total" value="10"/><br/>
-            供應商:<input type="text" id="supplier" value="150"/><br/>
+            供應商:<input type="text" id="supplierId" value="150"/><br/>
             價格:<input type="text" id="price" value="300"/><br/>
 			<input type="hidden" name="coffees" id="cfs" value=""/>
             <input type="submit" value="Send"/>
@@ -34,13 +34,13 @@
      	var coffee=document.getElementById("coffee").value;
      	var sale=document.getElementById("sale").value;
      	var total=document.getElementById("total").value;
-     	var supplier=document.getElementById("supplier").value;
+     	var supplierId=document.getElementById("supplierId").value;
      	var price=document.getElementById("price").value;
      	var obj={ };
      	obj.coffee=coffee;
      	obj.sale=sale;
      	obj.total=total;
-     	obj.supplier=supplier;
+     	obj.supplierId=supplierId;
      	obj.price=price;
      	var str=JSON.stringify(obj);
      	alert(str);
@@ -49,13 +49,13 @@
      	var coffee=document.getElementById("coffee").value;
      	var sale=document.getElementById("sale").value;
      	var total=document.getElementById("total").value;
-     	var supplier=document.getElementById("supplier").value;
+     	var supplierId=document.getElementById("supplierId").value;
      	var price=document.getElementById("price").value;
      	var obj={ };
      	obj.coffee=coffee;
      	obj.sale=sale;
      	obj.total=total;
-     	obj.supplier=supplier;
+     	obj.supplierId=supplierId;
      	obj.price=price;
      	coffees.push(obj);
      	alert("object save to Array");
